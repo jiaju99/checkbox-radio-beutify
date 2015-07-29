@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="skin/a_base.css"/>
+<style>
+
+
+
+/*ckbox-feilong-20150714-gz*/
+
+
+.ck{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;text-align:center; margin:0 4px;cursor:pointer; /*overflow:hidden;*/position:relative;}
+
+/* 20 */
+.ck1{width:14px;height:14px;line-height:14px;font-size:12px;}
+/* 26 */
+.ck2{width:20px;height:20px;line-height:20px;font-size:17px;}
+/* 32 */
+.ck3{width:26px;height:26px;line-height:26px;font-size:22px;}
+/* 38 */
+.ck4{width:32px;height:32px;line-height:32px;font-size:27px;}
+/* 44 */
+.ck5{width:38px;height:38px;line-height:38px;font-size:32px;}
+
+/*checkbox decoration */
+.cka{border:1px solid #d7d7d7;color:#f98b0c;background-color:#fff;border-radius:2px;}
+.cka.cked:before{content:'√';}
+/*.cka.cked:before{content: attr(data-cked);}*/
+
+/*radio decoration*/
+.rdo{border:1px solid #ccc;font-size:0;
+background-color:#f9f9f9;border-radius:50%;}
+.rdo.cked{border:1px solid #36c77b;color:#36c77b;background-color:#fff;}
+
+.rdo.cked:after{content:'';font-size:0;
+position:absolute; z-index:11;background-color:#36c77b;border-radius:50%;}
+/* 20 */
+.rdo1:after{width:8px;height:8px;left:3px;top:50%;margin-top:-4px;}
+/* 26 */
+.rdo2:after{width:12px;height:12px;left:4px;top:50%;margin-top:-6px;}
+/* 32 */
+.rdo3:after{width:16px;height:16px;left:5px;top:50%;margin-top:-8px;}
+/* 38 */
+.rdo4:after{width:20px;height:20px;left:6px;top:50%;margin-top:-10px;}
+/* 44 */
+.rdo5:after{width:24px;height:24px;left:7px;top:50%;margin-top:-12px;}
+
+.ckipt{opacity:0.1;filter:alpha(opacity=10);/*position:absolute;left:0;top:0;*/}
+.ckt{color:#999;cursor:pointer;}
+.ckted{ color:#000}
+
+
+
+</style>
+<title>模拟复选项单选项 美化</title>
+</head>
+<body id="ckbox2">
+
+
+<form action="" method="get">
+
+<h1>checkbox .ckipt .ck, .ckt  seperated</h1>
+
+<p>
+<input type="radio" name="bb[]" value="2" class="ckipt" />
+<input type="radio" name="bb[]" value="3"  class="ckipt" />
+<input type="radio" name="bb[]" value="4" class="ckipt" />
+<input type="radio" name="bb[]" value="5" class="ckipt" />
+<input type="radio" name="bb[]" value="6" class="ckipt" />
+
+<i class="ck ck3 rdo rdo3"></i><b class="ckt">option one</b>
+<i class="ck ck2 rdo rdo2"></i><b class="ckt">option one</b>
+<i class="ck ck1 rdo rdo1"></i><b class="ckt">option one</b>
+<i class="ck ck4 rdo rdo4"></i><b class="ckt">option one</b>
+<i class="ck ck5 rdo rdo5"></i><b class="ckt">option one</b>
+</p>
+
+<p>
+<input type="checkbox" name="a[]" value="2" class="ckipt" />
+<input type="checkbox" name="a[]" value="3"  class="ckipt" />
+<input type="checkbox" name="a[]" value="4" class="ckipt" />
+<input type="checkbox" name="a[]" value="5" class="ckipt" />
+<input type="checkbox" name="a[]" value="6" class="ckipt" />
+
+<i class="ck ck3 cka"></i><b class="ckt">option one</b>
+<i class="ck ck2 cka"></i><b class="ckt">option one</b>
+<i class="ck ck1 cka"></i><b class="ckt">option one</b>
+<i class="ck ck4 cka"></i><b class="ckt">option one</b>
+<i class="ck ck5 cka"></i><b class="ckt">option one</b>
+</p>
+
+
+
+
+<input name="tijiao" value="yes" type="submit"/>
+
+</form>
+
+
+
+
+
+<script src="js/jq.js"></script>
+<script src="js/flckbox.js"></script>
+
+<script>
+flckbox(".ckipt",".ck",".ckt");
+</script>
+
+
+</body>
+</html>
